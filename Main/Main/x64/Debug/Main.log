@@ -1,0 +1,42 @@
+﻿  Data.cpp
+  GameObject.cpp
+  main.cpp
+D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82): error C2512: “GameObject::GameObject”: 没有合适的默认构造函数可用
+  (编译源文件“GameObject.cpp”)
+  D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82):
+  尝试匹配参数列表“()”时
+  D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82):
+  模板实例化上下文(最早的实例化上下文)为
+  	E:\CppProj\Main\Main\GameObject.cpp(3,37):
+  	查看对正在编译的 类 模板 实例化“std::vector<GameObject,std::allocator<GameObject>>”的引用
+  	D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\vector(616,5):
+  	在编译 类 模板 成员函数“std::vector<GameObject,std::allocator<GameObject>>::vector(const unsigned __int64,const _Alloc &)”时
+          with
+          [
+              _Alloc=std::allocator<GameObject>
+          ]
+  		E:\CppProj\Main\Main\GameObject.cpp(3,52):
+  		请参阅 "void __cdecl `dynamic initializer for 'public: static std::vector<GameObject,std::allocator<GameObject> > GameObject::gameObjectList''(void)" 中对 "std::vector<GameObject,std::allocator<GameObject>>::vector" 的第一个引用
+  	D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\vector(618,9):
+  	查看对正在编译的函数 模板 实例化“void std::vector<GameObject,std::allocator<GameObject>>::_Construct_n<>(const unsigned __int64)”的引用
+  	D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\vector(2077,36):
+  	查看对正在编译的函数 模板 实例化“GameObject *std::_Uninitialized_value_construct_n<std::allocator<GameObject>>(GameObject *,unsigned __int64,_Alloc &)”的引用
+          with
+          [
+              _Alloc=std::allocator<GameObject>
+          ]
+  	D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\xmemory(2045,17):
+  	查看对正在编译的函数 模板 实例化“void std::_Uninitialized_backout_al<std::allocator<GameObject>>::_Emplace_back<>(void)”的引用
+  	D:\SoftWare\Visual Studio\VC\Tools\MSVC\14.39.33519\include\xmemory(1805,35):
+  	查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,>(_Alloc &,_Objty *const )”的引用
+          with
+          [
+              _Alloc=std::allocator<GameObject>,
+              _Ty=GameObject,
+              _Objty=GameObject
+          ]
+  
+E:\CppProj\Main\Main\main.cpp(43,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  MonoBehaviour.cpp
+  Script.cpp
+  正在生成代码...
