@@ -1,6 +1,6 @@
 # Unity ET框架下的ReferenceCollector解析器
 
-该解析器用于在Unity的ET框架中解析Prefab中的ReferenceCollector组件，并生成对应的C#代码。该代码用于访问Prefab中包含ReferenceCollector组件和名称带有“Form”的对象。
+该解析器用于在Unity的ET框架中解析Prefab中的ReferenceCollector组件，并生成对应的C#代码。
 
 ## 示例
 
