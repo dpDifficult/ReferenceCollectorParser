@@ -54,7 +54,7 @@ GameObject::gameObjectList中。
 
 ## 新增
 现在，该prefab的ReferenceCollecor上有prefab，如果它在同名文件夹下可以找到并一起解析。
-使用stringstream和string_view代替了string的拼接或者字串操作，更加高效了一点。
+使用string_view代替了string子串操作，更加高效了一点。
 
 ## 缺点
 2.想要新增类型时，需要手动在Script.cpp中添加对应的哈希表。
