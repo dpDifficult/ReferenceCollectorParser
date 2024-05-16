@@ -30,6 +30,9 @@
     <ClCompile Include="Data.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Target.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Target.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

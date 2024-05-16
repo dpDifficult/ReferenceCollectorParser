@@ -8,7 +8,7 @@ GameObject::GameObject(const std::string& name,const std::vector<std::string>&fi
 	: m_Name(name), fileID(fileid), monoBehaviour(mono)
 {
 	//构造完毕后加入gameObjectList,放到堆上
-	GameObject::gameObjectList.emplace_back(*this);
+	gameObjectList.emplace_back(*this);
 }
 
 GameObject::GameObject()
@@ -17,9 +17,9 @@ GameObject::GameObject()
 
 GameObject* GameObject::FindByFileID(const std::string& id)
 {
-	for (int i = 0; i < GameObject::gameObjectList.size(); i++)
+	for (int i = 0; i < gameObjectList.size(); i++)
 	{
-		GameObject &go = GameObject::gameObjectList[i];
+		GameObject &go = gameObjectList[i];
 		for (int j = 0; j < go.fileID.size(); ++j) {
 			if (id == go.fileID[j]) {
 				return &go;
@@ -64,9 +64,9 @@ bool GameObject::hasReferenceCollector() {
 
 void GameObject::PrintInfo()
 {
-	for (int i = 0; i < GameObject::gameObjectList.size(); i++)
+	for (int i = 0; i < gameObjectList.size(); i++)
 	{
-		std::cout << "m_Name: " << GameObject::gameObjectList[i].m_Name << ",  " << "Type: " << gameObjectList[i].GetTypeByPriority() << std::endl;
+		std::cout << "m_Name: " << gameObjectList[i].m_Name << ",  " << "Type: " << gameObjectList[i].GetTypeByPriority() << std::endl;
 	}
 }
 
@@ -76,7 +76,7 @@ gameObjectType::Type GameObject::GetTypeByPriority()
 		return gameObjectType::Type::GameObject;
 	}
 
-	auto maxScript = std::max_element(monoBehaviour.begin(), monoBehaviour.end(), [](MonoBehaviour b1, MonoBehaviour b2) {
+	auto maxScript = std::max_element(monoBehaviour.begin(), monoBehaviour.end(), [](auto b1, auto b2) {
 		return b1.m_Script.GetType() < b2.m_Script.GetType();
 		});
 	
